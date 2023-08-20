@@ -1,0 +1,81 @@
+:root {
+
+    /* Primary Colors */
+
+    --clr-pramiry-white: hsl(0, 0%, 100%);
+    --clr-hsl-dark-magenta: 300, 43%, 22%;
+    --clr-hsl-pink: 333, 80%, 67%;
+
+
+    /* Secondary Colors */
+    --clr-hsl-grayish-dark-magenta: 303, 10%, 53%;
+    --clr-hsl-grayish-light-magenta: 300, 24%, 96%;
+
+    /* Typography */
+    --ff-body: 'League Spartan', sans-serif;
+
+    --fw-m: 400;
+    --fw-l: 500;
+    --fw-xl: 700;
+
+    --fs-m: 0.9375rem;
+    /* 15 px */
+
+    /* Others */
+
+    /* 1110px */
+
+    --spacing-xxs: 0.25rem;
+    --spacing-xs: 0.5rem;
+    --spacing-s: 0.75rem;
+    --spacing-m: 1rem;
+    --spacing-l: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 2.25rem;
+    --spacing-xxxl: 2.5rem;
+
+    /* Responsive - based on Design */
+
+
+    /* Desktop */
+    /* Product max-width 1110px */
+    /* Product badding sides  165px - not needed */
+    /* Product padding top  118px */
+    /* Product padding bottom  100px at lowest - not needed */
+    /* Title to subtitle  1rem */
+    /* Subtitle to 1st top card  - Best envelop in grid/flex and use gap for the stacking */
+    /* Gap inside rating card  2rem side, 20px top/bottom */
+    /* Gap between rating cards 1rem */
+    /* Last rating card to top review card - best use subtitle to top rating  71px */
+    /* Gap between rating cards 30px */
+
+    /* Card padding left/right/bottom  2rem */
+    /* Card padding top  43px */
+    /* Name to picture 24px */
+    /* Name to Paragraph  2rem */
+
+
+
+
+
+
+    /* Mobile */
+    /* Product badding sides  24px */
+    /* Product padding top  82px */
+    /* Product padding bottom  99px */
+    /* Title to subtitle 17px */
+    /* Subtitle to 1st top card 39px */
+    /* Gap inside rating card 1rem */
+    /* Gap between rating cards 1rem */
+    /* Last rating card to top review card 49px */
+    /* Gap between rating cards 1rem */
+
+    /* Card padding left/right/bottom 2rem */
+    /* Card padding top 43px */
+    /* Name to picture 24px */
+    /* Name to Paragraph 24px */
+
+
+
+
+}
