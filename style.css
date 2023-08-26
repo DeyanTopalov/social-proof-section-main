@@ -213,7 +213,7 @@ body {
     .socialproof-header {
         display: grid;
         grid-template-columns: .7fr 1.3fr;
-        padding-bottom: 4.5rem;
+        padding-bottom: 3rem;
     }
 
     .socialproof-header-title {
@@ -226,7 +226,7 @@ body {
     }
 
     .socialproof-header-stars {
-        padding-top: 0;
+        padding-top: 1rem;
         display: flex;
         flex-direction: column;
         padding-left: 10rem;
