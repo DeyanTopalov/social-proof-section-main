@@ -213,7 +213,7 @@ body {
     .socialproof-header {
         display: grid;
         grid-template-columns: .7fr 1.3fr;
-        padding-bottom: 3rem;
+        padding-bottom: 2rem;
     }
 
     .socialproof-header-title {
@@ -248,17 +248,12 @@ body {
         align-self: flex-end;
     }
 
-    .socialproof-header-stars-container {
-        flex-direction: row;
-        align-content: center;
-        padding-left: 2rem;
-    }
 
     .socialproof-header-stars-container {
         display: grid;
         place-content: center;
         grid-template-columns: 0.5fr 1.5fr;
-        padding: 1.25rem 2rem 1.25rem 2rem;
+        padding: 1rem 2rem 1rem 2rem;
     }
 
 
