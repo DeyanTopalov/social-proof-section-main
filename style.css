@@ -6,9 +6,10 @@
     --clr-hsl-dark-magenta: 300, 43%, 22%;
     --clr-hsl-pink: 333, 80%, 67%;
 
-
+    --test-subheading: hsl(303, 10%, 53%);
     /* Secondary Colors */
     --clr-hsl-grayish-dark-magenta: 303, 10%, 53%;
+    /* Secondary tittle */
     --clr-hsl-grayish-light-magenta: 300, 24%, 96%;
 
     /* Typography */
@@ -18,8 +19,10 @@
     --fw-l: 500;
     --fw-xl: 700;
 
-    --fs-m: 0.9375rem;
-    /* 15 px */
+    --fs-m: 1.0625rem;
+    /* 17 px */
+    --fs-l: 1.1rem;
+    /* Secondary Title 19px */
 
     /* Others */
 
@@ -34,8 +37,14 @@
     --spacing-xxl: 2.25rem;
     --spacing-xxxl: 2.5rem;
 
-    /* Responsive - based on Design */
+    --brd-radius: 0.5rem;
 
+    /* Responsive - based on Design */
+    --max-width-responsive: 55rem;
+    --article-padding-top-responsive: 5.125rem;
+    --article-padding-bottom-responsive: 6.25rem;
+    --fs-title-responsive: 2.5rem;
+    --gap-stars-container-responsive: 0.9rem;
 
     /* Desktop */
     /* Product max-width 1110px */
@@ -54,7 +63,8 @@
     /* Name to picture 24px */
     /* Name to Paragraph  2rem */
 
-
+    /* Main Title 56px */
+    /* Secondary title 19px */
 
 
 
@@ -75,7 +85,149 @@
     /* Name to picture 24px */
     /* Name to Paragraph 24px */
 
+    /* Main Title 40px */
+    /* Secondary title 19px */
+
+}
+
+/* Global Styles */
+body {
+    min-height: 100vh;
+    background-color: var(--clr-pramiry-white);
+    display: grid;
+    place-content: center;
+    padding: var(--article-padding-top-responsive) var(--spacing-l) var(--article-padding-bottom-responsive) var(--spacing-l);
+    font-family: var(--ff-body);
+    font-weight: var(--fw-m);
+    font-size: var(--fs-m);
+}
+
+/* Utility Styles */
+
+/* Article Styles */
+
+.socialproof {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.socialproof-header {
+    /* background-color: rgb(207, 208, 208); */
+    color: hsla(var(--clr-hsl-dark-magenta), 1);
+    /* display: grid;
+    gap: var(--spacing-m); */
+}
+
+.socialproof-header-title {
+    display: grid;
+    gap: var(--spacing-m);
+}
+
+.socialproof-header-title-main {
+    font-size: var(--fs-title-responsive);
+    font-weight: var(--fw-xl);
+    line-height: 2rem;
+    text-align: center;
+    padding: 0.2rem;
+}
+
+.socialproof-header-title-secondary {
+    color: hsla(var(--clr-hsl-grayish-dark-magenta), 1);
+    font-size: var(--fs-l);
+    font-weight: var(--fw-l);
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.socialproof-header-stars {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-m);
+    padding-top: var(--spacing-xxxl);
+}
+
+.socialproof-header-stars-container {
+    display: flex;
+    gap: var(--gap-stars-container-responsive);
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    ;
+    background-color: hsla(var(--clr-hsl-grayish-light-magenta), 1);
+    border-radius: var(--brd-radius);
+    color: hsla(var(--clr-hsl-dark-magenta), 1);
+    font-size: var(--fs-m);
+    font-weight: var(--fw-xl);
+    transition: ease-in 200ms;
+}
+
+.stars-flex-group {
+    display: flex;
+    /* background-color: blueviolet; */
+}
+
+.socialproof-reviews {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-m);
+}
+
+.socialproof-reviews-card {
+    display: grid;
+    padding: var(--spacing-xl);
+    gap: 1.4rem;
+    background-color: hsla(var(--clr-hsl-dark-magenta), 1);
+    color: var(--clr-pramiry-white);
+    border-radius: var(--brd-radius);
+    font-weight: var(--fw-l);
+    line-height: 1.4rem;
+    transition: ease-in 200ms;
+}
+
+.flex-group-reviews-card {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 0.7rem;
+}
+
+.picture-container {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    overflow: hidden;
+}
+
+.name {
+    font-weight: var(--fw-xl);
+}
+
+.info {
+    color: hsla(var(--clr-hsl-pink), 1);
+    font-weight: var(--fw-m);
+}
+
+/* Hover effects */
+
+:where(.socialproof-header-stars-container, .socialproof-reviews-card):is(:hover, :focus) {
+    /* transform: scale(1.1); */
+    transform: scalex(1.1);
+    background-color: hsla(var(--clr-hsl-dark-magenta), .7);
+    color: var(--clr-pramiry-white);
+    border: 3px solid hsla(var(--clr-hsl-pink), 1);
+
+}
 
 
+/* Media Query */
 
+@media (min-width: 900px) {
+    :root {
+        --max-width-responsive: 69.375rem;
+        --article-padding-top-responsive: 7.375rem;
+        --article-padding-bottom-responsive: 8.25rem;
+        --fs-title-responsive: 3.5rem;
+        --gap-stars-container-responsive: 2rem;
+    }
 }
