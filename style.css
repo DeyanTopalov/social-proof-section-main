@@ -26,8 +26,6 @@
 
     /* Others */
 
-    /* 1110px */
-
     --spacing-xxs: 0.25rem;
     --spacing-xs: 0.5rem;
     --spacing-s: 0.75rem;
@@ -40,53 +38,14 @@
     --brd-radius: 0.5rem;
 
     /* Responsive - based on Design */
-    --max-width-responsive: 55rem;
+    --max-width-responsive: 40rem;
     --article-padding-top-responsive: 5.125rem;
     --article-padding-bottom-responsive: 6.25rem;
     --fs-title-responsive: 2.5rem;
     --gap-stars-container-responsive: 0.9rem;
+    --bg-image-top-responsive: url(images/bg-pattern-top-mobile.svg);
+    --bg-image-bottom-responsive: url(images/bg-pattern-bottom-mobile.svg);
 
-    /* Desktop */
-    /* Product max-width 1110px */
-    /* Product badding sides  165px - not needed */
-    /* Product padding top  118px */
-    /* Product padding bottom  100px at lowest - not needed */
-    /* Title to subtitle  1rem */
-    /* Subtitle to 1st top card  - Best envelop in grid/flex and use gap for the stacking */
-    /* Gap inside rating card  2rem side, 20px top/bottom */
-    /* Gap between rating cards 1rem */
-    /* Last rating card to top review card - best use subtitle to top rating  71px */
-    /* Gap between rating cards 30px */
-
-    /* Card padding left/right/bottom  2rem */
-    /* Card padding top  43px */
-    /* Name to picture 24px */
-    /* Name to Paragraph  2rem */
-
-    /* Main Title 56px */
-    /* Secondary title 19px */
-
-
-
-
-    /* Mobile */
-    /* Product badding sides  24px */
-    /* Product padding top  82px */
-    /* Product padding bottom  99px */
-    /* Title to subtitle 17px */
-    /* Subtitle to 1st top card 39px */
-    /* Gap inside rating card 1rem */
-    /* Gap between rating cards 1rem */
-    /* Last rating card to top review card 49px */
-    /* Gap between rating cards 1rem */
-
-    /* Card padding left/right/bottom 2rem */
-    /* Card padding top 43px */
-    /* Name to picture 24px */
-    /* Name to Paragraph 24px */
-
-    /* Main Title 40px */
-    /* Secondary title 19px */
 
 }
 
@@ -100,9 +59,13 @@ body {
     font-family: var(--ff-body);
     font-weight: var(--fw-m);
     font-size: var(--fs-m);
+    background-image: var(--bg-image-top-responsive),
+        var(--bg-image-bottom-responsive);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+
 }
 
-/* Utility Styles */
 
 /* Article Styles */
 
@@ -111,25 +74,23 @@ body {
     place-content: center;
     grid-template-columns: 1fr;
     gap: 3rem;
+    max-width: var(--max-width-responsive);
 }
 
 .socialproof-header {
-    /* background-color: rgb(207, 208, 208); */
     color: hsla(var(--clr-hsl-dark-magenta), 1);
-    /* display: grid;
-    gap: var(--spacing-m); */
 }
 
 .socialproof-header-title {
     display: grid;
     gap: var(--spacing-m);
+    text-align: center;
 }
 
 .socialproof-header-title-main {
     font-size: var(--fs-title-responsive);
     font-weight: var(--fw-xl);
     line-height: 2rem;
-    text-align: center;
     padding: 0.2rem;
 }
 
@@ -138,7 +99,6 @@ body {
     font-size: var(--fs-l);
     font-weight: var(--fw-l);
     line-height: 1.5rem;
-    text-align: center;
 }
 
 .socialproof-header-stars {
@@ -154,7 +114,6 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    ;
     background-color: hsla(var(--clr-hsl-grayish-light-magenta), 1);
     border-radius: var(--brd-radius);
     color: hsla(var(--clr-hsl-dark-magenta), 1);
@@ -165,7 +124,6 @@ body {
 
 .stars-flex-group {
     display: flex;
-    /* background-color: blueviolet; */
 }
 
 .socialproof-reviews {
@@ -209,20 +167,41 @@ body {
 }
 
 /* Hover effects */
+@media (width < 68.75rem) {
+    :where(.socialproof-header-stars-container, .socialproof-reviews-card):is(:hover, :focus) {
+        transform: scalex(1.1);
+        background-color: hsla(var(--clr-hsl-dark-magenta), .7);
+        color: var(--clr-pramiry-white);
+        border: 3px solid hsla(var(--clr-hsl-pink), 1);
+        cursor: pointer;
 
-:where(.socialproof-header-stars-container, .socialproof-reviews-card):is(:hover, :focus) {
-    /* transform: scale(1.1); */
-    transform: scalex(1.1);
-    background-color: hsla(var(--clr-hsl-dark-magenta), .7);
-    color: var(--clr-pramiry-white);
-    border: 3px solid hsla(var(--clr-hsl-pink), 1);
+    }
+}
 
+/* Media Query */
+@media (width >=50rem) {
+    :root {
+        --bg-image-top-responsive: url(images/bg-pattern-top-desktop.svg);
+        --bg-image-bottom-responsive: url(images/bg-pattern-bottom-desktop.svg);
+    }
+}
+
+@media (width >=56.25rem) and (width < 68.75rem) {
+
+
+    .socialproof-header {
+        display: grid;
+        grid-template-columns: .8fr 1.2fr;
+        gap: 2rem;
+    }
+
+    .socialproof-header-stars {
+        padding-top: 0;
+    }
 }
 
 
-/* Media Query */
-
-@media (min-width: 900px) {
+@media (min-width: 68.75rem) {
     :root {
         --max-width-responsive: 69.375rem;
         --article-padding-top-responsive: 7.375rem;
@@ -230,4 +209,89 @@ body {
         --fs-title-responsive: 3.5rem;
         --gap-stars-container-responsive: 2rem;
     }
+
+    .socialproof-header {
+        display: grid;
+        grid-template-columns: .7fr 1.3fr;
+        padding-bottom: 4.5rem;
+    }
+
+    .socialproof-header-title {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .socialproof-header-title-main {
+        line-height: 3rem;
+    }
+
+    .socialproof-header-stars {
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        padding-left: 10rem;
+    }
+
+    .socialproof-header-stars-container {
+        width: 27.8125rem;
+    }
+
+    .socialproof-header-stars-container:nth-of-type(1) {
+        align-self: flex-start;
+    }
+
+    .socialproof-header-stars-container:nth-of-type(2) {
+        align-self: center;
+    }
+
+    .socialproof-header-stars-container:nth-of-type(3) {
+        align-self: flex-end;
+    }
+
+    .socialproof-header-stars-container {
+        flex-direction: row;
+        align-content: center;
+        padding-left: 2rem;
+    }
+
+    .socialproof-header-stars-container {
+        display: grid;
+        place-content: center;
+        grid-template-columns: 0.5fr 1.5fr;
+        padding: 1.25rem 2rem 1.25rem 2rem;
+    }
+
+
+    .socialproof-reviews {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: unset;
+        grid-column: 1/-1;
+        gap: 1.875rem;
+    }
+
+    .socialproof-reviews-card:nth-of-type(2) {
+        transform: translateY(2rem);
+    }
+
+    .socialproof-reviews-card:nth-of-type(3) {
+        transform: translateY(4rem);
+    }
+
+    .socialproof-header-stars-container:is(:hover, :focus) {
+        transform: scale(1.05);
+        background-color: hsla(var(--clr-hsl-dark-magenta), .7);
+        color: var(--clr-pramiry-white);
+        border: 3px solid hsla(var(--clr-hsl-pink), 1);
+        cursor: pointer;
+    }
+
+    .socialproof-reviews-card:is(:hover, :focus) {
+        background-color: hsla(var(--clr-hsl-dark-magenta), .7);
+        color: var(--clr-pramiry-white);
+        border: 3px solid hsla(var(--clr-hsl-pink), 1);
+        cursor: pointer;
+
+    }
+
+
 }
