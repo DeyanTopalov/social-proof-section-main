@@ -265,11 +265,11 @@ body {
     }
 
     .socialproof-reviews-card:nth-of-type(2) {
-        transform: translateY(2rem);
+        transform: translateY(1rem);
     }
 
     .socialproof-reviews-card:nth-of-type(3) {
-        transform: translateY(4rem);
+        transform: translateY(2rem);
     }
 
     .socialproof-header-stars-container:is(:hover, :focus) {
@@ -285,8 +285,11 @@ body {
         color: var(--clr-pramiry-white);
         border: 3px solid hsla(var(--clr-hsl-pink), 1);
         cursor: pointer;
-
     }
 
+    .card-description {
+        letter-spacing: -0.304px;
+        /* Based on design */
+    }
 
 }
